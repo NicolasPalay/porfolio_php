@@ -1,0 +1,17 @@
+{
+    "name": "nicolas/portfolio_php",
+    "autoload": {
+        "psr-4": {
+            "Router\\": "Router/",
+            "Exception\\": "Exception/",
+            "Controller\\": "Controller/",
+            "src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nicolas"
+        }
+    ],
+    "require": {}
+}
