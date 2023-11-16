@@ -2,10 +2,21 @@
 
 namespace Controller;
 
+use src\Renderer;
+use Model\Project;
+
 class HomeController
 {
-    public function index()
+    public function index(): Renderer
     {
-        return 'HomePage';
+        $project = new Project();
+        $projects = $project->all();
+
+
+        foreach($projects as $projet){
+            var_dump($projet);
+        }
+
+        return Renderer::make('home/index', compact('projects'));
     }
 }

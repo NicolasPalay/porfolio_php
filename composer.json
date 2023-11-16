@@ -5,7 +5,8 @@
             "Router\\": "Router/",
             "Exception\\": "Exception/",
             "Controller\\": "Controller/",
-            "src\\": "src/"
+            "src\\": "src/",
+            "Model\\": "Model/"
         }
     },
     "authors": [
@@ -13,5 +14,7 @@
             "name": "nicolas"
         }
     ],
-    "require": {}
+    "require": {
+        "ext-pdo": "*"
+    }
 }
