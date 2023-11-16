@@ -33,7 +33,12 @@ class Connect
         return $statement->fetchAll();
 
     }
+    public function findByLast(): array
+    {
+        $statement = $this->getPDO()->query("SELECT * FROM {$this->table} ORDER BY id DESC LIMIT 1");
+        return $statement->fetchAll();
 
+    }
     protected function getPDO(): \PDO
     {
         return static::$pdo;

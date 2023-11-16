@@ -1,0 +1,28 @@
+.navbar,
+.navigation ul {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.navbar {
+    background: rgb(2, 24, 30);
+    background: linear-gradient(0deg, rgba(2, 24, 30, 1) 0%, rgba(8, 84, 108, 1) 70%, rgba(117, 160, 173, 1) 100%);
+}
+
+.navbar a {
+    padding: 10px 20px;
+    color: var(--white);
+}
+
+.navbar a:hover {
+
+    color: var(--color-secondary);
+}
+
+.np-icon-nav {
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}

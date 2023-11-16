@@ -5,13 +5,14 @@ namespace Controller;
 use src\Renderer;
 use Model\Project;
 
-class HomeController
+
+class ProjectController
 {
     public function index(): Renderer
     {
         $project = new Project();
-        $projects = $project->findByLast();
+        $projects = $project->all();
 
-        return Renderer::make('home/index', compact('projects'));
+        return Renderer::make('project/index', compact('projects'));
     }
 }

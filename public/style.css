@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import "assets/css/navigation.css";
+@import "assets/css/home.css";
+
+* {
+    box-sizing: border-box;
+    transition: 0.3s linear;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+
+:root {
+    --color-primary: #08546c;
+    --color-primaryL: #75a0ad;
+    --color-secondary: #b88e1f;
+    --white: #ddd;
+    --black: #333;
+    --font-1: 'Josefin Sans',
+    sans-serif;
+}
+
+body {
+    font-family: var(--font-1);
+    color: var(--black);
+    padding: 0;
+    margin: 0;
+}
+
+a,
+a:active {
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+a:hover,
+a:focus {
+    color: var(--color-primary);
+}
+
+.np-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto
+}
+
+.np-d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.np-btn {
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: block;
+    border: var(--color-primary) solid 2px;
+}
+
+.np-btn:hover {
+    border: var(--color-secondary)solid 2px;
+}

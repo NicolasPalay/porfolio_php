@@ -6,15 +6,30 @@ use Exception\RouteNotFoundException;
 
 class Router
 {
-    private array $routes;
-    public function register(string $path, callable|array $action): void
+    private array $routes = [];
+
+    public function register(string $path, callable|array $action, string $HTTPVerb): void
     {
-        $this->routes[$path] = $action;
+        $this->routes[$HTTPVerb][$path] = $action;
     }
-    public function resolve(string $uri) : mixed
+    public function get(string $path, callable|array $action): void
+    {
+        $this->register($path, $action,'GET');
+    }
+
+    public function post(string $path, callable|array $action): void
+    {
+        $this->register($path, $action,'POST');
+    }
+
+    public function getRoutes(): array
+    {
+        return $this->routes;
+    }
+    public function resolve(string $uri, string $requestMethod) : mixed
     {
         $path = explode('?', $uri)[0];
-        $action = $this->routes[$path] ?? null;
+        $action = $this->routes[$requestMethod][$path] ?? null;
         if (is_callable($action)) {
             return $action();
         }
